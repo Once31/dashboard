@@ -32,7 +32,7 @@ app.use("/dashboard", dashboard );
 const connectDB = async () => {
     try {
         await mongoose.connect(process.env["DATABASE_URL"] || "mongodb://localhost:27017/dashboard").then(() => {
-            console.log("Connection with mongodb")
+            console.log("Connected with mongodb successfully")
         }).catch(error => console.log("Mongo Error: ", error));
     } catch(error) {
         console.error("error", error)
